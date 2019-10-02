@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Galleri</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="jQuery/library.js"></script>
+        <script src="jQuery/functions.js"></script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+            <div id="main">
+                <section id="artist">
+                        <h1>Pablo Picasso</h1>
+                        <hr>
+                        <p>Pablo Picasso var en spansk kunstner født 25. oktober 1881. Han er mest kjent som en av grunneleggerne (sammen med Georges Barques) av kubismen. Selv om han døde en stund før HTML kom (1989), fikk han i løpet av karrieren laget flere digitale kunstverk. Han benyttet seg både av SVG-format og canvas. Kunstverkene kalles "
+                            Arte Abstracto". </p>
+                </section>
+                <section id="gallery">
+                    <div class="picture">
+                        <svg id="svg-picture" width="300px" height="300px">
+                            <circle id="circ1" r="20" cx="100" cy="200"/>
+                            <rect id="rec1"x="10" y="10" width="100" height="100"/>
+                            <rect id="rec2"x="150" y="50" width="100" height="50" />
+                            <polygon id="triangle" points="250,250 200,250 225,207"/>
+                            <path id="hexagon" d="M170,130 l 25 0 l 13 22 l -13 22 l -25 0 l -13 -22 l 13 -22 z"  />
+                        </svg>
+                        <h7 id="svg-description" class="image-description">Abstrakt kunst med SVG</h7>
+                    </div>
+                    <div class="picture">
+                        <canvas id="canvas" width="300px" height="300px">
+                            <p>Dette er for dem uten støtte for canvas</p>
+                        </canvas>
+                        <script src="canvas.js"></script>
+                        <h7 id="canvas-description" class="image-description">Abstrakt kunst med canvas</h7>
+                    </div>
+                </section>
+            </div>
+            <footer id="footer">
+                <div id=documentation>
+                    <p>Jeg har benyttet meg av CSS flexbox i dette prosjektet. Dette ble gjort siden jeg ikke så fordelene med CSS Grid når det kom til den lite kompliserte nettsiden beskrevet i oppgaven. Det var bare et sted jeg valgte å ha flere elementer ved siden av hverandre, og dermed ville grid føre til større kompleksitet. Dermed har jeg en div ved navn main som strekker seg nedover (flex-direction: column) som inneholder de ulike seksjonene til nettsida. Seksjonen kalt «gallery» er også en flexbox, men har motsatt retning (flex-direction: row), slik at elementene kommer ved siden av hverandre. </p>
+                    <p>Jeg brukte SVG ved å legge inn diverse figur-objekter i et SVG-element. Disse ble estetisk tilpasset ved hjelp av CSS og animert ved hjelp av jQuery. Alle figur-objektene ble gitt egne id’er slik at de kunne tilpasses og animert hver for seg. Dette var ikke mulig i HTML Canvas. Her kunne ikke objektene få egne navn og endres uavhengig av hverandre. Derfor lagde jeg en funksjon som oppdaterte canvas-elementet hver gang musepekeren bevegde seg over den. Hvert objekt blir fjernet hver gang ved å overskrive pikslene med bakgrunnsfargen. Deretter blir figurene tegnet opp og fargen/utformingen til figuren bli bestemt av musepekerens posisjon. </p>
+                    <p>Jeg har brukt jQuery til å fikse alle animasjoner når det kommer til SVG og til resten av nettsida. Dette ble derimot ikke brukt til å kode interaksjonen med HTML Canvas-elementet, siden de opplæringssidene og -videoene jeg fant brukte ren JavaScript til dette. Jeg startet med å ha en del kode for animasjon i CSS-filen. Dette valgte jeg å gå bort i fra da jeg syntes det var enklere strukturelt sett å ha all kode for animasjon i jQuery-filen. Eneste unntaket her er knappen for å vise dokumentasjon, den har kode for hva som skal skje ved klikk og hover i CSS. Dette ble gjort siden jeg så på det som en del av komponenten, og ikke ekstra animasjon som påvirker andre elementer. </p>
+                    <p>Jeg utviklet nettsiden ved å bruke Chrome som nettleser. Siden omtrent 62% av verdens brukere bruker denne nettleseren så tenkte jeg det var lurt å teste på den først (Schwarz, <a href="https://www.sitepoint.com/cross-browser-testing-tools/">Link to article</a>). Siden Apple ikke har laget Safari for Windows 10 siden 2013, så har jeg ikke fått testet nettsiden med den nettleseren. Dette måtte jeg gjort dersom den skulle ligge offentlig tilgjengelig. Derimot, har jeg testet ved hjelp av Microsoft Edge og Mozilla Firefox. Begge ga samme resultat som chrome. Jeg testet den også på Internet Explorer, men det funket veldig dårlig. Denne har ikke fått nye oppdateringer fra Microsoft siden 2013, så det er ikke et stort problem. Likevel, ville jeg prøvd å lage nettsiden fungerende på denne nettleseren også dersom den skulle ligge på internett. </p>
+                    <p>Den viktigste informasjonskilden jeg har brukt har helt klart vært <a href="https://www.w3schools.com/">W3 Schools</a>. Denne siden hadde god dokumentasjon for HTML, CSS og jQuery. Jeg brukte den mest av alt for å søke opp kommandoer og fargevalg, men den hadde også gode undervisningssider og testsider (her kunne du få tidligere lagde eksempler og teste dem ut direkte i nettleseren). Jeg slet litt med å lage bilde og animere det i canvas. Derfor brukte jeg Chris Courses sin Canvas-opplæringsspilleliste på Youtube (<a href="https://www.youtube.com/playlist?list=PLpPnRKq7eNW3We9VdCfx9fprhqXHwTPXL">Link</a>). </p>
+                </div>
+                <button id="btn1">Show documentation</button>
+            </footer>
+        </div>
+    </body>    
+</html>

@@ -1,0 +1,166 @@
+
+
+html, body{
+    margin: 0;
+    display:flex;
+    flex-direction: column; 
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    height:100%;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+/* Divs */
+
+div#page-wrapper{
+    display:flex;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+div#main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+    overflow: auto;
+    padding-bottom: 80px;
+    width: 90%;
+}
+
+div#documentation{
+    width:80%;
+}
+
+div.picture{
+    width:50%;
+    text-align: center;
+}
+
+
+/* Sections */
+
+section#artist{
+    height:100px;
+    text-align: center;
+    margin-bottom:50px;
+    width: 60%;
+}
+
+section#gallery{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width:80%;
+    height: 50%;
+    margin-top: 275px;
+    justify-content: center;
+}
+
+/* Footer */
+
+footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top:-80px;
+    clear: both;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+footer #documentation{
+    display:none;
+}
+
+/* HR */
+
+section#artist hr{
+    border-color: #33d6ff;
+    width: 20%;
+}
+
+/* Pictures*/
+
+h7.image-description{
+    display:none;
+}
+
+/* Buttons */
+
+button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 200;
+    color: #00a3cc;
+    height: 50px;
+    margin: 15px 15px;
+    background: transparent;
+    width:15%;
+    border: 2px solid #00a3cc;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover{
+    color: white;
+    background-color: #00a3cc;
+}
+
+button:active{
+    background-color: #005266;
+    border-color:#005266;
+}
+
+/* Text */
+
+h1{
+    font-weight: 200;
+    color: #008fb3;
+    margin-bottom: 0px;
+
+}
+
+h7.image-description{
+    margin-top: 15px;
+    width: 100%;
+    font-style: italic;
+}
+
+
+svg, canvas{
+    box-shadow: 5px 5px 30px;
+}
+
+/* SVG */
+
+#rec1{
+    fill: #00a3cc;
+}
+
+#rec2{
+    fill: transparent;
+    stroke: #005266;
+}
+
+#circ1{
+    fill:#003d4d;
+}
+
+#triangle{
+    fill:#b3f0ff;
+}
+
+#hexagon{
+    fill: transparent;
+    stroke: #33d6ff;
+}
+
+
